@@ -9,18 +9,11 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/api/app.py"
+      "dest": "api/app.py"
     },
     {
-      "src": "/",
-      "dest": "/public/index.html",
-      "headers": {
-        "Cache-Control": "s-maxage=0"
-      }
-    },
-    {
-      "src": "/public/(.*)",
-      "dest": "/public/$1"
+      "src": "/(.*)",
+      "dest": "public/$1"
     }
   ]
 }
